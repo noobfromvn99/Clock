@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_031731) do
+ActiveRecord::Schema.define(version: 2020_06_12_163316) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_06_12_031731) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "timezone_id"
+    t.boolean "display"
     t.index ["timezone_id"], name: "index_utcs_on_timezone_id"
   end
 
