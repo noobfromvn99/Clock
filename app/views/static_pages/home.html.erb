@@ -1,0 +1,55 @@
+<% provide(:title , "Clock +") %>      
+
+<h1>Clock +</h1>
+<div class="mode">
+
+ <div class="row" style="">
+<div class="dot" style="background-color:green"> </div>Business time</div>
+<div class="row" style="">
+<div class="dot" style="background-color:yellow"> </div>Business overtime</div>
+<div class="row" style="">
+<div class="dot" style="background-color:red"></div>Personal time</div>
+<div class="row" style="">
+<div class="dot" style=" background-color: transparent; box-shadow: inset -12px 5px 0 3px white"></div>Sleeping time</div>
+</div>
+<p style="text-align: center;">Clock built by Bach Dao - s3673712</p>
+<div class="container ">
+<p class="arrow"></p></div>
+<div class="container " style="width:50%; background-color: #3d3b35;">
+<h1 style="width:2px;height:2px;"></h1></div>
+<div class="container ruler" style="width:50%; background-color: #3d3b35;"></div>
+ 
+  <div class="container" style="width:50%; background-color: #3d3b35;">
+    <% @city_array.each do |city| %>
+      <div class="row" style="border-top:1px solid #777; padding: 10px 20px">
+            <div class="col-sm-3">
+              <div class="row">
+                <h3 style="float:left"><%= city.value.split("/")[1] %></h3>  
+              </div>
+              <div class="row" style="margin-left:20px">
+              <% if getTimezone(city.timezone_id).offset - getTimezone(@default_id).offset != 0 %>
+                <% if getTimezone(city.timezone_id).offset - getTimezone(@default_id).offset > 0 %>
+                +
+                <% end %>
+                <%= getTimezone(city.timezone_id).offset - getTimezone(@default_id).offset %>
+                <% end %>
+              </div>
+           </div>
+          <div class="col-sm-3" style="margin-right:30px;float:right">
+                <div class="row" >
+                     <h3 style="float:right"><%= Time.now.in_time_zone(city.value).strftime("%H : %M") %></h3> 
+                </div>
+                <div class="row" >
+                    <div style="float:right">
+                    
+                      <%= compareDate(Time.now.in_time_zone(city.value).strftime("%d")) %>
+                     
+                      <%= raw timeMode(Time.now.in_time_zone(city.value).strftime("%H:%M")) %></div> 
+
+                    </div>
+                  </div>
+               
+              </div> 
+             <% end %>
+    <div>
+     

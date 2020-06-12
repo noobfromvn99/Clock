@@ -1,0 +1,212 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    padding-top: 60px;
+    background-color: black;
+    color: white;
+  }
+  
+  section {
+    overflow: auto;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .center h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* typography */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1;
+  }
+  
+  h1 {
+    font-size: 4em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+  
+  /* header */
+  
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+  }
+  
+  #logo:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .custom-nav{
+      color: green !important;
+      font-weight: bold;
+  }
+  .custom-nav.active  {
+
+      border-radius: 25px;
+    color: black !important;
+    background-color:green;
+  }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    background-color: unset !important;
+    color: unset !important;
+    }
+
+  /* footer */
+  
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: $gray-light;
+    font-weight: bold;
+    text-align: center;
+    height: 2.5rem;
+    margin-bottom:30px;
+  }
+  .footer-copyright {
+    margin-top: 12px;
+  }
+/*custom*/
+.ruler{
+   
+    background-image: 
+    linear-gradient(90deg, 
+      rgba(73, 73, 73, 0.5) 0, 
+      rgba(73, 73, 73, 0.5) 2%, 
+      transparent 2%
+    ), 
+    linear-gradient(180deg, 
+    #3d3b35 50%, 
+      transparent 50%
+    ), 
+    linear-gradient(90deg, 
+      transparent 50%, 
+      rgba(73, 73, 73, 0.5) 50%, 
+      rgba(73, 73, 73, 0.5) 52%, 
+      transparent 52%
+    ), 
+    
+    linear-gradient(180deg, 
+    #3d3b35 70%, 
+      transparent 70%
+    ), 
+    linear-gradient(90deg, 
+      transparent 10%,
+      rgba(73, 73, 73, 0.9) 10%, 
+      rgba(73, 73, 73, 0.9) 12%, 
+      transparent 12%, 
+      
+      transparent 20%,
+      rgba(73, 73, 73, 0.9) 20%, 
+      rgba(73, 73, 73, 0.9) 22%, 
+      transparent 22%, 
+      
+      transparent 30%, 
+      rgba(73, 73, 73, 0.9) 30%,
+      rgba(73, 73, 73, 0.9) 32%, 
+      transparent 32%, 
+      
+      transparent 40%, 
+      rgba(73, 73, 73, 0.9) 40%, 
+      rgba(73, 73, 73, 0.9) 42%, 
+      transparent 42%, 
+      
+      transparent 60%, 
+      rgba(73, 73, 73, 0.9) 60%, 
+      rgba(73, 73, 73, 0.9) 62%, 
+      transparent 62%, 
+      
+      transparent 70%, 
+      rgba(73, 73, 73, 0.9) 70%, 
+      rgba(73, 73, 73, 0.9) 72%, 
+      transparent 72%, 
+      
+      transparent 80%, 
+      rgba(73, 73, 73, 0.9) 80%, 
+      rgba(73, 73, 73, 0.9) 82%, 
+      transparent 82%, 
+      
+      transparent 90%, 
+      rgba(73, 73, 73, 0.9) 90%, 
+      rgba(73, 73, 73, 0.9) 92%, 
+      transparent 92%
+    );
+  background-size: 50px 40px;
+  background-repeat: repeat-x;
+  min-height: 40px;
+}
+.arrow {
+  margin:0;
+  padding:0;
+  text-align: center;
+  justify-content: center;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left:570px;
+  border-bottom: 10px solid #3d3b35;
+}
+/*mode*/
+.mode {
+  position: absolute;
+  bottom: 60%;
+  left: 16px;
+  font-size: 18px;
+  margin-left: 180px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+ }

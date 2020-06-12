@@ -1,0 +1,2 @@
+class Utc < ApplicationRecord
+end
