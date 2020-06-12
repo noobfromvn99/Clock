@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-City.create(name: 'Melbourne')
+
 data = ActiveSupport::JSON.decode(File.read("db/zone.json"))
 data.each do |attributes|
     puts attributes["value"]
@@ -23,3 +23,9 @@ data.each do |attributes|
         )
     end
 end
+uts = Utc.all
+uts.each do |utc|
+    utc.display = false
+    utc.save!
+end
+
